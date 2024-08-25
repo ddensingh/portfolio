@@ -1,0 +1,160 @@
+.intro {
+  background: #0e0e0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    .imgContainer {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    text-align: left;
+    padding: 20px;
+
+    .wrapper {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+      margin-top: 300px;
+
+margin-left: 100px;
+      h1 {
+        font-size: 2.5rem;
+        margin: 20px 0;
+        color: whitesmoke;
+        font-style: italic;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        color: whitesmoke;
+        font-style: italic;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: whitesmoke;
+        font-style: italic;
+
+        span {
+          font-size: 1.5rem;
+          color: lightgray;
+
+          .ityped-cursor {
+            animation: blink 1s infinite;
+          }
+
+          @keyframes blink {
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .download-container {
+      position: absolute;
+      bottom: 40px;
+      right: 20px; // Move the button to the right side
+
+      button {
+        background-color: whitesmoke;
+        padding: 15px 40px;
+        border: none;
+        font-weight: bold;
+        border-radius: 20px;
+        transition: 1s;
+        overflow: auto;
+
+       
+      }
+    }
+  }
+
+  .rain-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+
+    .left {
+      flex: 1;
+      .imgContainer {
+        margin-left: 20px;
+        max-width: 800px;
+      }
+    }
+
+    .right {
+      flex: 1;
+      align-items: flex-start;
+      text-align: left;
+      padding: 20px;
+      position: relative;
+      width: 400px;
+
+      .download-container {
+        bottom: 80px;
+        right: 40px; // Adjust position on larger screens
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .right {
+    .wrapper {
+      h1 {
+        font-size: 3.75rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

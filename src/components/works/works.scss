@@ -1,0 +1,148 @@
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+  position: relative;
+
+  .area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        bottom: -40px;
+        animation: bubble 8s infinite; // Decrease animation duration for faster bubbles
+        animation-timing-function: linear;
+      }
+
+      // Adjust all li elements as per faster speed requirement
+      li:nth-child(1) { left: 10%; width: 60px; height: 60px; animation-duration: 7s; }
+      li:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-duration: 9s; animation-delay: 1s; }
+      li:nth-child(3) { left: 25%; width: 40px; height: 40px; animation-duration: 8s; animation-delay: 2s; }
+      li:nth-child(4) { left: 40%; width: 50px; height: 50px; animation-duration: 6s; animation-delay: 1s; }
+      li:nth-child(5) { left: 70%; width: 60px; height: 60px; animation-duration: 9s; animation-delay: 2s; }
+      li:nth-child(6) { left: 80%; width: 40px; height: 40px; animation-duration: 7s; animation-delay: 1s; }
+      li:nth-child(7) { left: 90%; width: 30px; height: 30px; animation-duration: 8s; animation-delay: 2s; }
+      li:nth-child(8) { left: 50%; width: 50px; height: 50px; animation-duration: 10s; animation-delay: 3s; }
+      li:nth-child(9) { left: 65%; width: 40px; height: 40px; animation-duration: 8s; animation-delay: 1s; }
+      li:nth-child(10) { left: 85%; width: 20px; height: 20px; animation-duration: 6s; animation-delay: 1s; }
+      li:nth-child(11) { left: 12%; width: 55px; height: 55px; animation-duration: 9s; }
+      li:nth-child(12) { left: 18%; width: 25px; height: 25px; animation-duration: 10s; animation-delay: 2s; }
+      li:nth-child(13) { left: 30%; width: 35px; height: 35px; animation-duration: 8s; animation-delay: 3s; }
+      li:nth-child(14) { left: 45%; width: 48px; height: 48px; animation-duration: 7s; animation-delay: 1s; }
+      li:nth-child(15) { left: 75%; width: 55px; height: 55px; animation-duration: 11s; animation-delay: 2s; }
+      li:nth-child(16) { left: 85%; width: 33px; height: 33px; animation-duration: 8s; animation-delay: 1s; }
+      li:nth-child(17) { left: 93%; width: 29px; height: 29px; animation-duration: 9s; animation-delay: 2s; }
+      li:nth-child(18) { left: 57%; width: 46px; height: 46px; animation-duration: 12s; animation-delay: 3s; }
+      li:nth-child(19) { left: 63%; width: 38px; height: 38px; animation-duration: 9s; animation-delay: 1s; }
+      li:nth-child(20) { left: 80%; width: 25px; height: 25px; animation-duration: 6s; animation-delay: 1s; }
+    }
+  }
+
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+  }
+
+  .works {
+    width: 1000px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .carousel-item {
+      transition: transform 1s ease-in-out;
+
+      .leftContainer {
+        padding: 2rem;
+
+        h2 {
+          font-size: 2rem;
+          margin-top: 1rem;
+        }
+
+        p {
+          margin-top: 1rem;
+          font-size: 1rem;
+        }
+
+        span {
+          display: inline-block;
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
+          background-color: #007bff;
+          color: #fff;
+          border-radius: 0.25rem;
+          cursor: pointer;
+        }
+
+        .imgContainer {
+          img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 20px;
+            position: relative;
+            left: -150px;
+          }
+        }
+      }
+
+      .main-img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+      background: none;
+      border: none;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.read-more-btn {
+  padding: 7px 15px;
+  border: none;
+  background-color: black;
+  color: #f8f9fa;
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 5px;
+}

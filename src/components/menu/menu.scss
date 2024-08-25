@@ -1,0 +1,43 @@
+@import '../../global.scss'; 
+
+.menu {
+    width: 400px;
+    height: 100vh;
+    background-color: $maincolor;
+    position: fixed;
+    top: 0;
+    right: -400px; /* Start hidden off the screen on the right */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 1s ease; /* Smooth transition for sliding in and out */
+overflow: hidden;
+    &.active {
+        right: 0; /* Move into view */
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        font-size: 35px;
+        font-weight: 300;
+        font-style: italic;
+        width: 60%;
+        overflow: hidden;
+        li{
+            margin-bottom: 30px;
+            a{
+                text-decoration: none;
+                color: aliceblue;
+                gap: 30px;
+            }
+            &:hover{
+                font-weight: 500;
+            }
+        }
+    }
+}
